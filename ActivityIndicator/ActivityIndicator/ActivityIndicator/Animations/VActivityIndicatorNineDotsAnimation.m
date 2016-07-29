@@ -15,8 +15,7 @@
     NSTimeInterval beginTime = CACurrentMediaTime();
     
     CGFloat circleSize = size.width / 4.0f;
-    CGFloat circlePadding = circleSize / 2.0f;
-    
+    CGFloat circlePadding = circleSize / 2.0f;    
     CGFloat oX = (layer.bounds.size.width - circleSize * 3 - circlePadding * 2) / 2.0f;
     CGFloat oY = (layer.bounds.size.height - circleSize * 3 - circlePadding * 2) / 2.0f;
     
