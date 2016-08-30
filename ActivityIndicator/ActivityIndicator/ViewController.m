@@ -24,8 +24,9 @@
                                @(VActivityIndicatorAnimationTypeNineDots),
                                @(VActivityIndicatorAnimationTypeCookieTerminator),
                                @(VActivityIndicatorAnimationTypeRotatingSandglass),
+                               @(VActivityIndicatorAnimationTypeTripleRings),
                                @(VActivityIndicatorAnimationTypeRotatingTrigon),
-                               @(VActivityIndicatorAnimationTypeTripleRings),];
+                               ];
     
     for (int i = 0; i < activityTypes.count; i++) {
         VActivityIndicator *activityIndicatorView = [[VActivityIndicator alloc] initWithType:(VActivityIndicatorAnimationType)[activityTypes[i] integerValue] tintColor:[UIColor whiteColor]];

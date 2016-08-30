@@ -14,17 +14,17 @@
 
     NSTimeInterval beginTime = CACurrentMediaTime();
     
-    CGFloat circleSize = size.width / 4.0f;
-    CGFloat circlePadding = circleSize / 2.0f;    
-    CGFloat oX = (layer.bounds.size.width - circleSize * 3 - circlePadding * 2) / 2.0f;
-    CGFloat oY = (layer.bounds.size.height - circleSize * 3 - circlePadding * 2) / 2.0f;
-    
     NSArray *timeOffsets = @[@(0.11f), @(0.42f), @(0.0f),
                              @(0.65f), @(0.48f), @(0.2f),
                              @(0.63f), @(0.95f), @(0.62f)];
     NSArray *durations = @[@(0.72f), @(1.02f), @(1.28f),
                            @(1.42f), @(1.45f), @(1.18f),
                            @(0.87f), @(1.45f), @(1.06f)];
+    
+    CGFloat circleSize = size.width / 4.0f;
+    CGFloat circlePadding = circleSize / 2.0f;    
+    CGFloat oX = (layer.bounds.size.width - circleSize * 3 - circlePadding * 2) / 2.0f;
+    CGFloat oY = (layer.bounds.size.height - circleSize * 3 - circlePadding * 2) / 2.0f;
     
     for (int i = 0; i < MIN(timeOffsets.count, durations.count); i++) {
         CALayer *circle = [CALayer layer];
@@ -40,6 +40,7 @@
                                       [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5f, 0.5f, 0.0f)]];
         
         CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+        
         opacityAnimation.values = @[@(0.5f), @(1.0f), @(0.5f)];
         
         CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
